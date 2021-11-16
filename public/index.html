@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Apigee Tester</title>
+  <script src="https://unpkg.com/htmx.org@1.6.0"></script>
+  <script src="https://unpkg.com/htmx.org@1.6.0/dist/ext/client-side-templates.js"></script>
+  <script src="https://unpkg.com/mustache@latest"></script>
+</head>
+<body>
+  <div hx-ext="client-side-templates">
+
+    <div></div>
+
+    <button hx-get="apim/apiproducts" 
+            hx-swap="innerHTML"
+            hx-target="#content"
+            mustache-template="products">
+      Load API Products
+    </button>
+    <button hx-get="apim/developers" 
+            hx-swap="innerHTML"
+            hx-target="#content"
+            mustache-template="developers">
+      Load Developers
+    </button>
+
+    <p id="content"></p>
+  </div>
+</body>
+
+<!--Templates-->
+<template id="products">
+  <p> 
+    {{#apiProducts}} 
+      <b>{{name}}</b>
+      <br>
+      {{access}}
+      <br><br>
+    {{/apiProducts}}
+
+  </p>
+</template>
+<template id="developers">
+  <p> 
+    {{#developers}}
+      <b>{{firstName}} {{lastName}}</b>
+      <br>
+      <a href="mailto:{{email}}">{{email}}</a>
+      <br><br>
+    {{/developers}}
+  </p>
+</template>
+</html>

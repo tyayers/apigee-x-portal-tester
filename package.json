@@ -1,0 +1,28 @@
+{
+  "name": "apigee-x-portal-template",
+  "version": "0.4.0",
+  "description": "A simple web portal template for Apigee X.",
+  "main": "dist",
+  "scripts": {
+    "start": "tsc && node dist",
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "apigee",
+    "apigee-x",
+    "developer",
+    "devportal",
+    "portal",
+    "api"
+  ],
+  "author": "tyler.ayers@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "apigee-x-module": "^0.5.9",
+    "express": "^4.17.1"
+  }
+}
