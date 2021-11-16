@@ -22,7 +22,7 @@
     "typescript": "^4.4.4"
   },
   "dependencies": {
-    "apigee-x-module": "^0.5.9",
+    "apigee-x-module": "^0.5.11",
     "express": "^4.17.1"
   }
 }
